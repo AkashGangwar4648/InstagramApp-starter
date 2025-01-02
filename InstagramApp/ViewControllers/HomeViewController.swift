@@ -58,17 +58,74 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return posts.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell()
+        if indexPath.row == 0{
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell") as! StoriesTableViewCell
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell") as! FeedTableViewCell
+        
+        let currentIndex = indexPath.row
+        
+        let postData = posts[currentIndex]
+        
+        cell.profileImage.image = postData.user.profileImage
+        
+        cell.postImage.image = postData.postImage
+        
+        cell.dateLabel.text = postData.datePosted
+        
+        cell.likesCountLabel.text = "\(postData.likesCount) likes"
+        
+        cell.postCommentLabel.text = postData.postComment
+        
+        cell.userNameTitleButton.setTitle(postData.user.name, for: .normal)
+        
+        cell.commentCountButton.setTitle("View all \(postData.commentCount) comments", for: .normal)
         
         return cell
         
     }
+    
+    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // First row is the Stories cell
+        if indexPath.row == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell", for: indexPath) as! StoriesTableViewCell
+            return cell
+        }
+
+        // Other rows are Feed cells
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedTableViewCell", for: indexPath) as! FeedTableViewCell
+
+        // Adjust the index for posts array
+        let currentIndex = indexPath.row - 1
+
+        // Safely access the posts array
+        guard currentIndex >= 0 && currentIndex < posts.count else {
+            fatalError("Invalid index for posts array")
+        }
+
+        let postData = posts[currentIndex]
+
+        // Populate cell with post data
+        cell.profileImage.image = postData.user.profileImage
+        cell.postImage.image = postData.postImage
+        cell.dateLabel.text = postData.datePosted
+        cell.likesCountLabel.text = "\(postData.likesCount) likes"
+        cell.postCommentLabel.text = postData.postComment
+        cell.userNameTitleButton.setTitle(postData.user.name, for: .normal)
+        cell.commentCountButton.setTitle("View all \(postData.commentCount) comments", for: .normal)
+
+        return cell
+    }*/
+
     
 
     /*
