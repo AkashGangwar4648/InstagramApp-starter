@@ -30,6 +30,7 @@
 		18BEB6AB2D25DEAD0089F47B /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6AA2D25DEAD0089F47B /* PhotoLibraryViewController.swift */; };
 		18BEB6AD2D25DF210089F47B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6AC2D25DF210089F47B /* CameraViewController.swift */; };
 		18BEB6AF2D2653F80089F47B /* TabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6AE2D2653F80089F47B /* TabBarDelegate.swift */; };
+		9D2E76032D2687AD00246FE7 /* HomeViewController+CustomMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E76022D26879F00246FE7 /* HomeViewController+CustomMethods.swift */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
 		E147A08C2159176300AD9178 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E147A08B2159176300AD9178 /* Assets.xcassets */; };
 		E147A08F2159176400AD9178 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E147A08D2159176400AD9178 /* LaunchScreen.storyboard */; };
@@ -65,6 +66,7 @@
 		18BEB6AA2D25DEAD0089F47B /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		18BEB6AC2D25DF210089F47B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		18BEB6AE2D2653F80089F47B /* TabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDelegate.swift; sourceTree = "<group>"; };
+		9D2E76022D26879F00246FE7 /* HomeViewController+CustomMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CustomMethods.swift"; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E147A0842159176200AD9178 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E147A08B2159176300AD9178 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		189392812D21797E0067E194 /* New Group */ = {
+		189392812D21797E0067E194 /* StoryBoards */ = {
 			isa = PBXGroup;
 			children = (
 				189392822D217A030067E194 /* Home.storyboard */,
@@ -98,13 +100,13 @@
 				189392882D217A3D0067E194 /* Profile.storyboard */,
 				1893928A2D217A500067E194 /* Activity.storyboard */,
 			);
-			path = "New Group";
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 		1893928C2D217A930067E194 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				1893928E2D217B070067E194 /* HomeViewController.swift */,
+				9D2E76012D26878D00246FE7 /* HomeScreen */,
 				189392902D217B1C0067E194 /* SearchViewController.swift */,
 				189392922D217B320067E194 /* NewPostViewController.swift */,
 				189392942D217B4F0067E194 /* ProfileViewController.swift */,
@@ -131,6 +133,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9D2E76012D26878D00246FE7 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+				1893928E2D217B070067E194 /* HomeViewController.swift */,
+				9D2E76022D26879F00246FE7 /* HomeViewController+CustomMethods.swift */,
+			);
+			path = HomeScreen;
+			sourceTree = "<group>";
+		};
 		E147A0782159176200AD9178 = {
 			isa = PBXGroup;
 			children = (
@@ -155,7 +166,7 @@
 				E147A0842159176200AD9178 /* AppDelegate.swift */,
 				189392992D2316070067E194 /* Views */,
 				1893928C2D217A930067E194 /* ViewControllers */,
-				189392812D21797E0067E194 /* New Group */,
+				189392812D21797E0067E194 /* StoryBoards */,
 				E1D28C3021629A1300DB621F /* Library */,
 				E1D74798215FC8BF007A3584 /* Data */,
 				E147A08D2159176400AD9178 /* LaunchScreen.storyboard */,
@@ -273,6 +284,7 @@
 			files = (
 				18BEB6A32D2547940089F47B /* ExploreCollectionViewCell.swift in Sources */,
 				E1E440B42163F16E0034FD40 /* UserData.swift in Sources */,
+				9D2E76032D2687AD00246FE7 /* HomeViewController+CustomMethods.swift in Sources */,
 				18BEB6AF2D2653F80089F47B /* TabBarDelegate.swift in Sources */,
 				18BEB6AB2D25DEAD0089F47B /* PhotoLibraryViewController.swift in Sources */,
 				E1D28C3721629B5700DB621F /* SimpleCamera.swift in Sources */,
