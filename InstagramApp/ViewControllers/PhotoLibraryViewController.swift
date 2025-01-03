@@ -1,14 +1,14 @@
 //
-//  SearchViewController.swift
+//  PhotoLibraryViewController.swift
 //  InstagramApp
 //
-//  Created by Apple on 29/12/24.
-//  Copyright © 2024 Gwinyai Nyatsoka. All rights reserved.
+//  Created by Apple on 02/01/25.
+//  Copyright © 2025 Gwinyai Nyatsoka. All rights reserved.
 //
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class PhotoLibraryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

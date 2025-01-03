@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,7 +19,7 @@
                 <subviews>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Cng-MC-a1H">
                         <rect key="frame" x="0.0" y="0.0" width="494" height="125"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="125" id="T19-Vm-UiE"/>
                         </constraints>
@@ -34,6 +33,7 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="Cng-MC-a1H" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Jjt-gR-MwL"/>
+                    <constraint firstAttribute="bottom" secondItem="Cng-MC-a1H" secondAttribute="bottom" id="LMK-JP-RUo"/>
                     <constraint firstAttribute="trailing" secondItem="Cng-MC-a1H" secondAttribute="trailing" id="vjB-wY-fn0"/>
                     <constraint firstItem="Cng-MC-a1H" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="y96-x0-o84"/>
                 </constraints>
@@ -45,9 +45,4 @@
             <point key="canvasLocation" x="259.5419847328244" y="48.943661971830991"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

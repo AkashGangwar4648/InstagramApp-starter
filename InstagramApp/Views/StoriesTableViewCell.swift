@@ -46,7 +46,7 @@ class StoriesTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         
         cell.storyImage.image = stories[indexPath.row].post.postImage
         
-        cell.userNmaeLabel.text = stories[indexPath.row].post.user.name
+        cell.userNameLabel.text = stories[indexPath.row].post.user.name
         
         return cell
         
