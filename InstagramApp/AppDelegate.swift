@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let activityStoryboard = UIStoryboard(name: "Activity", bundle: nil)
         
-        let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+        let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
         
         let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "Search") as! SearchViewController
         
