@@ -13,7 +13,6 @@
 		189392892D217A3D0067E194 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189392882D217A3D0067E194 /* Profile.storyboard */; };
 		1893928B2D217A500067E194 /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1893928A2D217A500067E194 /* Activity.storyboard */; };
 		1893928F2D217B070067E194 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1893928E2D217B070067E194 /* HomeViewController.swift */; };
-		189392912D217B1C0067E194 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189392902D217B1C0067E194 /* SearchViewController.swift */; };
 		189392932D217B320067E194 /* NewPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189392922D217B320067E194 /* NewPostViewController.swift */; };
 		189392952D217B4F0067E194 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189392942D217B4F0067E194 /* ProfileViewController.swift */; };
 		189392972D217B620067E194 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189392962D217B620067E194 /* ActivityViewController.swift */; };
@@ -30,6 +29,8 @@
 		18BEB6AB2D25DEAD0089F47B /* PhotoLibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6AA2D25DEAD0089F47B /* PhotoLibraryViewController.swift */; };
 		18BEB6AD2D25DF210089F47B /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6AC2D25DF210089F47B /* CameraViewController.swift */; };
 		18BEB6AF2D2653F80089F47B /* TabBarDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6AE2D2653F80089F47B /* TabBarDelegate.swift */; };
+		18BEB6BD2D27E8030089F47B /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6BB2D27E8030089F47B /* SearchViewController.swift */; };
+		18BEB6BE2D27E8030089F47B /* SearchViewCustomMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6BC2D27E8030089F47B /* SearchViewCustomMethods.swift */; };
 		9D2E76032D2687AD00246FE7 /* HomeViewController+CustomMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2E76022D26879F00246FE7 /* HomeViewController+CustomMethods.swift */; };
 		9DF298BA2D27DFA0008FA0E4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF298B92D27DFA0008FA0E4 /* HomeVC.swift */; };
 		9DF298BC2D27E1E4008FA0E4 /* HomeVC+CustomMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF298BB2D27E1D7008FA0E4 /* HomeVC+CustomMethods.swift */; };
@@ -51,7 +52,6 @@
 		189392882D217A3D0067E194 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		1893928A2D217A500067E194 /* Activity.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		1893928E2D217B070067E194 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		189392902D217B1C0067E194 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		189392922D217B320067E194 /* NewPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostViewController.swift; sourceTree = "<group>"; };
 		189392942D217B4F0067E194 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		189392962D217B620067E194 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +68,8 @@
 		18BEB6AA2D25DEAD0089F47B /* PhotoLibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoLibraryViewController.swift; sourceTree = "<group>"; };
 		18BEB6AC2D25DF210089F47B /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		18BEB6AE2D2653F80089F47B /* TabBarDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarDelegate.swift; sourceTree = "<group>"; };
+		18BEB6BB2D27E8030089F47B /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = SearchScreen/SearchViewController.swift; sourceTree = "<group>"; };
+		18BEB6BC2D27E8030089F47B /* SearchViewCustomMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewCustomMethods.swift; path = SearchScreen/SearchViewCustomMethods.swift; sourceTree = "<group>"; };
 		9D2E76022D26879F00246FE7 /* HomeViewController+CustomMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeViewController+CustomMethods.swift"; sourceTree = "<group>"; };
 		9DF298B92D27DFA0008FA0E4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		9DF298BB2D27E1D7008FA0E4 /* HomeVC+CustomMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+CustomMethods.swift"; sourceTree = "<group>"; };
@@ -110,9 +112,10 @@
 		1893928C2D217A930067E194 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18BEB6BB2D27E8030089F47B /* SearchViewController.swift */,
+				18BEB6BC2D27E8030089F47B /* SearchViewCustomMethods.swift */,
 				9DF298B82D27DF7E008FA0E4 /* HomeScreenUI */,
 				9D2E76012D26878D00246FE7 /* HomeScreen */,
-				189392902D217B1C0067E194 /* SearchViewController.swift */,
 				189392922D217B320067E194 /* NewPostViewController.swift */,
 				189392942D217B4F0067E194 /* ProfileViewController.swift */,
 				189392962D217B620067E194 /* ActivityViewController.swift */,
@@ -303,7 +306,6 @@
 				18BEB6AB2D25DEAD0089F47B /* PhotoLibraryViewController.swift in Sources */,
 				E1D28C3721629B5700DB621F /* SimpleCamera.swift in Sources */,
 				E1D28C3521629B5000DB621F /* SimpleCameraView.swift in Sources */,
-				189392912D217B1C0067E194 /* SearchViewController.swift in Sources */,
 				189392A42D2327A40067E194 /* FeedTableViewCell.swift in Sources */,
 				9DF298BA2D27DFA0008FA0E4 /* HomeVC.swift in Sources */,
 				1893928F2D217B070067E194 /* HomeViewController.swift in Sources */,
@@ -312,12 +314,14 @@
 				189392952D217B4F0067E194 /* ProfileViewController.swift in Sources */,
 				9DF298BC2D27E1E4008FA0E4 /* HomeVC+CustomMethods.swift in Sources */,
 				18BEB6AD2D25DF210089F47B /* CameraViewController.swift in Sources */,
+				18BEB6BD2D27E8030089F47B /* SearchViewController.swift in Sources */,
 				18BEB6A92D25DD630089F47B /* NewPostPageViewController.swift in Sources */,
 				189392972D217B620067E194 /* ActivityViewController.swift in Sources */,
 				E147A0852159176200AD9178 /* AppDelegate.swift in Sources */,
 				18BEB6A52D2570C40089F47B /* SearchBarContainerView.swift in Sources */,
 				E147A09B215917EB00AD9178 /* FeedData.swift in Sources */,
 				E1D28C3321629B4800DB621F /* SimpleCameraProtocol.swift in Sources */,
+				18BEB6BE2D27E8030089F47B /* SearchViewCustomMethods.swift in Sources */,
 				1893929C2D2316500067E194 /* StoriesTableViewCell.swift in Sources */,
 				189392A02D2320760067E194 /* StoryCollectionViewCell.swift in Sources */,
 				189392932D217B320067E194 /* NewPostViewController.swift in Sources */,
