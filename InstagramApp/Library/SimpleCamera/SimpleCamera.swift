@@ -536,55 +536,57 @@ class SimpleCamera: NSObject, SimpleCameraProtocol {
         }
         
         // Setup for Microphone
-        let microphone = AVCaptureDevice.default(for: AVMediaType.audio)
-        
-        do {
-            let micInput = try AVCaptureDeviceInput(device: microphone!)
-            if session.canAddInput(micInput) {
-                session.addInput(micInput)
-            }
-        } catch {
-            print("Error setting device audio input: \(error)")
-            return false
-        }
-        
-        do {
-            // create a video capture device
-            
-            let videoCaptureDevice = AVCaptureDevice.default(for: AVMediaType.video)
-            // try creating a device input for the video capture device – note: this might throw an exception!
-            let videoDeviceInput = try AVCaptureDeviceInput(device: videoCaptureDevice!)
-            // check whether we can add this device input to our session
-            if session.canAddInput(videoDeviceInput) {
-                // we can – add it!
-                session.addInput(videoDeviceInput)
-                activeInput = videoDeviceInput
-            } else {
-                // we can't – escape!
-                print("Failed to add video device input")
-                session.commitConfiguration()
-                return false
-            }
-            // check whether we can add our photo output
-            
-            if session.canAddOutput(photoOutput) {
-                // we can – add it!
-                session.addOutput(photoOutput)
-                // request high-res photo support
-                photoOutput.isHighResolutionCaptureEnabled = true
-            } else {
-                // we can't – escape!
-                print("Failed to add photo output")
-                session.commitConfiguration()
+        if let microphone = AVCaptureDevice.default(for: AVMediaType.audio) {
+            do {
+                let micInput = try AVCaptureDeviceInput(device: microphone)
+                if session.canAddInput(micInput) {
+                    session.addInput(micInput)
+                }
+            } catch {
+                print("Error setting device audio input: \(error)")
                 return false
             }
             
-        } catch {
-            // something went wrong – escape!
-            print("Failed to create device input: \(error)")
-            session.commitConfiguration()
-            return false
+            do {
+                // create a video capture device
+                
+                let videoCaptureDevice = AVCaptureDevice.default(for: AVMediaType.video)
+                // try creating a device input for the video capture device – note: this might throw an exception!
+                let videoDeviceInput = try AVCaptureDeviceInput(device: videoCaptureDevice!)
+                // check whether we can add this device input to our session
+                if session.canAddInput(videoDeviceInput) {
+                    // we can – add it!
+                    session.addInput(videoDeviceInput)
+                    activeInput = videoDeviceInput
+                } else {
+                    // we can't – escape!
+                    print("Failed to add video device input")
+                    session.commitConfiguration()
+                    return false
+                }
+                // check whether we can add our photo output
+                
+                if session.canAddOutput(photoOutput) {
+                    // we can – add it!
+                    session.addOutput(photoOutput)
+                    // request high-res photo support
+                    photoOutput.isHighResolutionCaptureEnabled = true
+                } else {
+                    // we can't – escape!
+                    print("Failed to add photo output")
+                    session.commitConfiguration()
+                    return false
+                }
+                
+            } catch {
+                // something went wrong – escape!
+                print("Failed to create device input: \(error)")
+                session.commitConfiguration()
+                return false
+            }
         }
+        
+        
         
         // if we made it here then everything went well – commit the configuration
         session.commitConfiguration()

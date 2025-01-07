@@ -13,6 +13,7 @@ import Photos
 class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
     @IBOutlet weak var photosCollectionView: UICollectionView!
+    
     var images = [PHAsset]()
     
     override func viewDidLoad() {
@@ -43,13 +44,10 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
                         
                     }
                     
-                case .denied, .notDetermined, .restricted:
+                case .denied, .notDetermined, .restricted, .limited:
                     
                     return
-                    // Akash----
-                case .limited:
                     
-                    return
                 }
                 
             }
@@ -98,7 +96,7 @@ class PhotoLibraryViewController: UIViewController, UICollectionViewDataSource, 
                                             targetSize: CGSize(width: 120.0, height: 120.0),
                                             contentMode: .aspectFill,
                                             options: nil) { (result, _) in
-            cell.photoImageView?.image = result
+                                                cell.photoImageView?.image = result
         })
         
         return cell

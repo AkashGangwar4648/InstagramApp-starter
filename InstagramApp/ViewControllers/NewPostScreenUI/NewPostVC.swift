@@ -13,7 +13,7 @@ enum NewPostPageToShow: Int {
     var identifier: String {
         switch self {
         case .liberary:
-            return "PhotoLiberaryVC"
+            return "PhotoLibraryVC"
         case .camera:
             return "CameraVC"
         }
