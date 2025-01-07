@@ -30,13 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
         
-        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "Search") as! SearchViewController
+        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchVC") as! SearchVC
         
-        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
+        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPostVC") as! NewPostVC
         
         let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
         
-        let activityVC = activityStoryboard.instantiateViewController(withIdentifier: "Activity") as! ActivityViewController
+        let activityVC = activityStoryboard.instantiateViewController(withIdentifier: "Activity") as! ActivityVC
         
         let vcData: [(UIViewController, UIImage, UIImage)] = [
         

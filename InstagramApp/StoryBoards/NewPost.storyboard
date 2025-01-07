@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--New Post View Controller-->
+        <!--New PostVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="NewPost" id="Y6W-OH-hqX" customClass="NewPostViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NewPostVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="NewPostVC" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f9m-kA-jE1">
                                 <rect key="frame" x="0.0" y="59" width="393" height="694"/>
                                 <connections>
-                                    <segue destination="Poe-wm-5fu" kind="embed" id="Mhw-fQ-PAQ"/>
+                                    <segue destination="Poe-wm-5fu" kind="embed" id="K9i-LZ-Ngg"/>
                                 </connections>
                             </containerView>
                         </subviews>
@@ -82,18 +82,18 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--New Post Page View Controller-->
+        <!--New Post PageVC-->
         <scene sceneID="dBl-5U-99P">
             <objects>
-                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Poe-wm-5fu" customClass="NewPostPageViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController"/>
+                <pageViewController storyboardIdentifier="NewPostPageVC" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="Poe-wm-5fu" customClass="NewPostPageVC" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SVy-Hc-4id" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="801" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--Photo Library View Controller-->
         <scene sceneID="1Qj-2A-w87">
             <objects>
-                <viewController storyboardIdentifier="PhotoLiberaryVC" id="Ufz-4G-HhG" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PhotoLiberaryVC" id="Ufz-4G-HhG" customClass="PhotoLibraryViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q0X-G0-bF9">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,14 +108,14 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="RLC-85-mut">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCell" id="RLC-85-mut" customClass="PhotoCollectionViewCell" customModule="InstagramApp" customModuleProvider="target">
                                         <rect key="frame" x="100" y="0.0" width="193" height="179"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K0s-eh-6te">
                                             <rect key="frame" x="0.0" y="0.0" width="193" height="179"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xPc-2V-1tz">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xPc-2V-1tz" customClass="photosCollectionViewCell">
                                                     <rect key="frame" x="0.0" y="0.0" width="193" height="179"/>
                                                 </imageView>
                                             </subviews>
@@ -127,6 +127,9 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="193" height="179"/>
+                                        <connections>
+                                            <outlet property="photoImageView" destination="xPc-2V-1tz" id="XQa-SQ-NP7"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -140,6 +143,9 @@
                             <constraint firstItem="IAR-MK-LDO" firstAttribute="top" secondItem="mw3-Ox-X7a" secondAttribute="top" id="xQe-ns-9vV"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="photosCollectionView" destination="Q0X-G0-bF9" id="w5K-m8-qjE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S88-La-UL1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -162,7 +168,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="camera_capture_icon"/>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-7F-4hu" customClass="SimpleCameraView" customModule="InstagramApp" customModuleProvider="target">
+                            <view contentMode="scaleToFill" restorationIdentifier="SimpleCameraView" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-7F-4hu" customClass="SimpleCameraView" customModule="InstagramApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="59" width="393" height="393"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -180,6 +186,9 @@
                             <constraint firstItem="3Qz-4b-lSd" firstAttribute="centerX" secondItem="Pru-lk-DQn" secondAttribute="centerX" id="tba-MO-vyB"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="simpleCameraView" destination="Pru-lk-DQn" id="g3T-4N-bAM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9c9-4h-OFM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -45,7 +45,7 @@ class TabBarDelegate: NSObject, UITabBarControllerDelegate {
             
             let newPostStorybard = UIStoryboard(name: "NewPost", bundle: nil)
             
-            let newPostVC = newPostStorybard.instantiateViewController(withIdentifier: "NewPost") as! NewPostViewController
+            let newPostVC = newPostStorybard.instantiateViewController(withIdentifier: "NewPostVC") as! NewPostVC
             
             let navController = UINavigationController(rootViewController: newPostVC)
             
