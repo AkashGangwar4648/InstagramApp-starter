@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
-    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -9,20 +9,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Activity View Controller-->
+        <!--ActivityVC-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="Activity" id="Y6W-OH-hqX" customClass="ActivityViewController" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Activity" id="Y6W-OH-hqX" customClass="ActivityVC" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxf-dS-vdd" customClass="CustomSegmentedControl" customModule="InstagramApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="RgD-dV-tgb"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MHg-91-mw6">
+                                <rect key="frame" x="0.0" y="68" width="414" height="668"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="yZH-vO-tVl"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="k04-IR-8o3"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MHg-91-mw6" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="8gb-kE-ip9"/>
+                            <constraint firstItem="MHg-91-mw6" firstAttribute="top" secondItem="gxf-dS-vdd" secondAttribute="bottom" id="IRU-qH-hBa"/>
+                            <constraint firstItem="MHg-91-mw6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="RpI-ZT-fF4"/>
+                            <constraint firstItem="gxf-dS-vdd" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="h8K-uO-7Ep"/>
+                            <constraint firstItem="gxf-dS-vdd" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="hfp-FM-XIH"/>
+                            <constraint firstItem="gxf-dS-vdd" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="v0x-ep-JhR"/>
+                            <constraint firstItem="MHg-91-mw6" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" id="vf1-sK-gfB"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="MHg-91-mw6" id="U9w-Yl-bdO"/>
+                        <outlet property="segmentedControl" destination="gxf-dS-vdd" id="5EV-Rk-Rx2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="48" y="-2"/>
+            <point key="canvasLocation" x="46.376811594202906" y="-2.4456521739130435"/>
         </scene>
     </scenes>
     <resources>

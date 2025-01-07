@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="h1L-if-dak">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tma-NH-Qru">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,34 +45,34 @@
             <point key="canvasLocation" x="-433" y="13"/>
         </scene>
         <!--HomeVC-->
-        <scene sceneID="CD4-NV-SFR">
+        <scene sceneID="BOv-B2-7da">
             <objects>
-                <viewController storyboardIdentifier="HomeVC" id="h1L-if-dak" customClass="HomeVC" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bDp-2E-cLS">
+                <viewController storyboardIdentifier="HomeVC" id="Tma-NH-Qru" customClass="HomeVC" customModule="InstagramApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9Ph-bM-kFj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="aXj-kc-p31">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qua-Rt-SLa">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="h5c-k1-570"/>
+                        <viewLayoutGuide key="safeArea" id="7al-ux-0vE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="aXj-kc-p31" firstAttribute="top" secondItem="h5c-k1-570" secondAttribute="top" id="dcs-Fl-p4w"/>
-                            <constraint firstItem="h5c-k1-570" firstAttribute="trailing" secondItem="aXj-kc-p31" secondAttribute="trailing" id="fVc-js-2Y3"/>
-                            <constraint firstItem="aXj-kc-p31" firstAttribute="leading" secondItem="h5c-k1-570" secondAttribute="leading" id="ouP-KZ-HKP"/>
-                            <constraint firstItem="h5c-k1-570" firstAttribute="bottom" secondItem="aXj-kc-p31" secondAttribute="bottom" id="spK-fW-Vne"/>
+                            <constraint firstItem="Qua-Rt-SLa" firstAttribute="leading" secondItem="7al-ux-0vE" secondAttribute="leading" id="PeG-8J-Rkt"/>
+                            <constraint firstItem="Qua-Rt-SLa" firstAttribute="top" secondItem="7al-ux-0vE" secondAttribute="top" id="cwI-Jw-9Lg"/>
+                            <constraint firstItem="7al-ux-0vE" firstAttribute="bottom" secondItem="Qua-Rt-SLa" secondAttribute="bottom" id="rJE-rT-K3T"/>
+                            <constraint firstItem="7al-ux-0vE" firstAttribute="trailing" secondItem="Qua-Rt-SLa" secondAttribute="trailing" id="s8e-ZS-hB8"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="aXj-kc-p31" id="Ff0-Fg-fgz"/>
+                        <outlet property="tableView" destination="Qua-Rt-SLa" id="2zn-qm-475"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CH5-gj-bzK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LeN-Me-abg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="294" y="13"/>
+            <point key="canvasLocation" x="352" y="13"/>
         </scene>
     </scenes>
     <resources>

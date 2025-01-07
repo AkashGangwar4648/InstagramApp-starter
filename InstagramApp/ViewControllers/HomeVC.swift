@@ -1,14 +1,14 @@
 //
-//  ActivityViewController.swift
+//  HomeVC.swift
 //  InstagramApp
 //
-//  Created by Apple on 29/12/24.
-//  Copyright © 2024 Gwinyai Nyatsoka. All rights reserved.
+//  Created by Apple on 03/01/25.
+//  Copyright © 2025 Gwinyai Nyatsoka. All rights reserved.
 //
 
 import UIKit
 
-class ActivityViewController: UIViewController {
+class HomeVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
