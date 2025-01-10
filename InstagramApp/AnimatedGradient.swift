@@ -2,7 +2,7 @@
 //  AnimatedGradient.swift
 //  InstagramApp
 //
-//  Created by Gwinyai on 20/1/2019.
+//  Created by Gwinyai on 08/01/25.
 //  Copyright © 2019 Gwinyai Nyatsoka. All rights reserved.
 //
 

@@ -5,6 +5,8 @@
 //
 
 import UIKit
+import FirebaseCore
+import FirebaseAuth
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,91 +18,105 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        let tabController = UITabBarController()
+        FirebaseApp.configure()
         
-        let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
-        
-        let searchStoryboard = UIStoryboard(name: "Search", bundle: nil)
-        
-        let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
-        
-        let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
-        
-        let activityStoryboard = UIStoryboard(name: "Activity", bundle: nil)
-        
-        let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
-        
-        let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchVC") as! SearchVC
-        
-        let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPostVC") as! NewPostVC
-        
-        let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
-        
-        let activityVC = activityStoryboard.instantiateViewController(withIdentifier: "Activity") as! ActivityVC
-        
-        let vcData: [(UIViewController, UIImage, UIImage)] = [
-        
-            (homeVC, UIImage(named: "home_tab_icon")!, UIImage(named: "home_selected_tab_icon")!),
+        if let _ = Auth.auth().currentUser {
             
-            (searchVC, UIImage(named: "search_tab_icon")!, UIImage(named: "search_selected_tab_icon")!),
+            let tabController = UITabBarController()
             
-            (newPostVC, UIImage(named: "post_tab_icon")!, UIImage(named: "post_tab_icon")!),
+            let homeStoryboard = UIStoryboard(name: "Home", bundle: nil)
             
-            (profileVC, UIImage(named: "profile_tab_icon")!, UIImage(named: "profile_selected_tab_icon")!),
+            let searchStoryboard = UIStoryboard(name: "Search", bundle: nil)
             
-            (activityVC, UIImage(named: "activity_tab_icon")!, UIImage(named: "activity_selected_tab_icon")!),
+            let newPostStoryboard = UIStoryboard(name: "NewPost", bundle: nil)
             
-        ]
-        
-        //Map function
-        let vcs = vcData.map { (vc, defaultImage, selectedImage) -> UINavigationController in
+            let profileStoryboard = UIStoryboard(name: "Profile", bundle: nil)
             
-            let nav = UINavigationController(rootViewController: vc)
+            let activityStoryboard = UIStoryboard(name: "Activity", bundle: nil)
             
-            nav.tabBarItem.image = defaultImage
+            let homeVC = homeStoryboard.instantiateViewController(withIdentifier: "HomeVC") as! HomeVC
             
-            nav.tabBarItem.selectedImage = selectedImage
+            let searchVC = searchStoryboard.instantiateViewController(withIdentifier: "SearchVC") as! SearchVC
             
-            return nav
+            let newPostVC = newPostStoryboard.instantiateViewController(withIdentifier: "NewPostVC") as! NewPostVC
             
-        }
-        
-        tabController.viewControllers = vcs
-        
-        //-------------Question-----------------
-        
-        tabController.tabBar.isTranslucent = true
-        
-        tabController.delegate = tabBarDelegate
-        
-        if let items = tabController.tabBar.items {
+            let profileVC = profileStoryboard.instantiateViewController(withIdentifier: "Profile") as! ProfileViewController
             
-            for item in items {
+            let activityVC = activityStoryboard.instantiateViewController(withIdentifier: "ActivityVC") as! ActivityVC
+            
+            let vcData: [(UIViewController, UIImage, UIImage)] = [
                 
-                if let image = item.image {
-                    
-                    item.image = image.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-                    
-                }
+                (homeVC, UIImage(named: "home_tab_icon")!, UIImage(named: "home_selected_tab_icon")!),
                 
-                if let selectedImage = item.selectedImage {
-                    
-                    item.selectedImage = selectedImage.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
-                    
-                }
+                (searchVC, UIImage(named: "search_tab_icon")!, UIImage(named: "search_selected_tab_icon")!),
                 
-                item.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+                (newPostVC, UIImage(named: "post_tab_icon")!, UIImage(named: "post_tab_icon")!),
+                
+                (profileVC, UIImage(named: "profile_tab_icon")!, UIImage(named: "profile_selected_tab_icon")!),
+                
+                (activityVC, UIImage(named: "activity_tab_icon")!, UIImage(named: "activity_selected_tab_icon")!),
+                
+            ]
+            
+            //Map function
+            let vcs = vcData.map { (vc, defaultImage, selectedImage) -> UINavigationController in
+                
+                let nav = UINavigationController(rootViewController: vc)
+                
+                nav.tabBarItem.image = defaultImage
+                
+                nav.tabBarItem.selectedImage = selectedImage
+                
+                return nav
                 
             }
             
+            tabController.viewControllers = vcs
+            
+            //-------------Question-----------------
+            
+            tabController.tabBar.isTranslucent = true
+            
+            tabController.delegate = tabBarDelegate
+            
+            if let items = tabController.tabBar.items {
+                
+                for item in items {
+                    
+                    if let image = item.image {
+                        
+                        item.image = image.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+                        
+                    }
+                    
+                    if let selectedImage = item.selectedImage {
+                        
+                        item.selectedImage = selectedImage.withRenderingMode(UIImage.RenderingMode.alwaysOriginal)
+                        
+                    }
+                    
+                    item.imageInsets = UIEdgeInsets(top: 6, left: 0, bottom: -6, right: 0)
+                    
+                }
+                
+            }
+            
+            
+            UINavigationBar.appearance().backgroundColor = UIColor.white
+            
+            window?.rootViewController = tabController
+            
+        }
+        else {
+            let loginStoryboard = UIStoryboard(name: "Login", bundle: nil)
+            
+            let LoginViewController = loginStoryboard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+            window?.rootViewController = LoginViewController
+                                               
         }
         
-        
-        UINavigationBar.appearance().backgroundColor = UIColor.white
-        
-        window?.rootViewController = tabController
-        
         return true
+            
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

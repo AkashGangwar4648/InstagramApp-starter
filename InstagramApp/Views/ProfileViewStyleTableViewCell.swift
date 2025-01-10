@@ -2,8 +2,8 @@
 //  ProfileViewStyleTableViewCell.swift
 //  InstagramApp
 //
-//  Created by Gwinyai on 20/1/2019.
-//  Copyright © 2019 Gwinyai Nyatsoka. All rights reserved.
+//  Created by Apple on 07/01/25.
+//  Copyright © 2025 Gwinyai Nyatsoka. All rights reserved.
 //
 
 import UIKit

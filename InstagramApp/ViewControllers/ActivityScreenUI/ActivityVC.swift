@@ -100,6 +100,10 @@ class ActivityVC: UIViewController, UIScrollViewDelegate {
 }
 
 extension ActivityVC: ActivityDelegate {
+    func activityDidTouch() {
+        print("ACTIVITY DID TOUCH...!")
+    }
+    
     
     func scrollTo(index: Int) {
         
