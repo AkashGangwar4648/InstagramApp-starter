@@ -12,7 +12,6 @@
 		189392832D217A030067E194 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189392822D217A030067E194 /* Home.storyboard */; };
 		189392852D217A160067E194 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189392842D217A160067E194 /* Search.storyboard */; };
 		189392872D217A2D0067E194 /* NewPost.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189392862D217A2D0067E194 /* NewPost.storyboard */; };
-		189392892D217A3D0067E194 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 189392882D217A3D0067E194 /* Profile.storyboard */; };
 		189392932D217B320067E194 /* NewPostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189392922D217B320067E194 /* NewPostVC.swift */; };
 		189392952D217B4F0067E194 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189392942D217B4F0067E194 /* ProfileViewController.swift */; };
 		189392972D217B620067E194 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189392962D217B620067E194 /* ActivityVC.swift */; };
@@ -50,6 +49,7 @@
 		18ABC5F42D2F989600FAE36C /* ProfileViewStyleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABC5F32D2F989600FAE36C /* ProfileViewStyleTableViewCell.swift */; };
 		18ABC5F62D2F995D00FAE36C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABC5F52D2F995D00FAE36C /* Protocols.swift */; };
 		18ABC5F82D2F996500FAE36C /* AnimatedGradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABC5F72D2F996500FAE36C /* AnimatedGradient.swift */; };
+		18BA445A2D36388E00325370 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18BA44592D36388E00325370 /* Profile.storyboard */; };
 		18BEB6A32D2547940089F47B /* ExploreCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6A22D2547940089F47B /* ExploreCollectionViewCell.swift */; };
 		18BEB6A52D2570C40089F47B /* SearchBarContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6A42D2570C40089F47B /* SearchBarContainerView.swift */; };
 		18BEB6A72D25C8430089F47B /* CollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6A62D25C8430089F47B /* CollectionLayout.swift */; };
@@ -78,7 +78,6 @@
 		189392822D217A030067E194 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		189392842D217A160067E194 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		189392862D217A2D0067E194 /* NewPost.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewPost.storyboard; sourceTree = "<group>"; };
-		189392882D217A3D0067E194 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		189392922D217B320067E194 /* NewPostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPostVC.swift; sourceTree = "<group>"; };
 		189392942D217B4F0067E194 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		189392962D217B620067E194 /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
@@ -113,6 +112,7 @@
 		18ABC5F32D2F989600FAE36C /* ProfileViewStyleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewStyleTableViewCell.swift; sourceTree = "<group>"; };
 		18ABC5F52D2F995D00FAE36C /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		18ABC5F72D2F996500FAE36C /* AnimatedGradient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatedGradient.swift; sourceTree = "<group>"; };
+		18BA44592D36388E00325370 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		18BEB6A22D2547940089F47B /* ExploreCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionViewCell.swift; sourceTree = "<group>"; };
 		18BEB6A42D2570C40089F47B /* SearchBarContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarContainerView.swift; sourceTree = "<group>"; };
 		18BEB6A62D25C8430089F47B /* CollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionLayout.swift; sourceTree = "<group>"; };
@@ -157,8 +157,8 @@
 				189392822D217A030067E194 /* Home.storyboard */,
 				189392842D217A160067E194 /* Search.storyboard */,
 				189392862D217A2D0067E194 /* NewPost.storyboard */,
-				189392882D217A3D0067E194 /* Profile.storyboard */,
 				18ABC5E52D2F982E00FAE36C /* Activity.storyboard */,
+				18BA44592D36388E00325370 /* Profile.storyboard */,
 				18ABC5E32D2F97EA00FAE36C /* Post.storyboard */,
 				18ABC5E72D2F983800FAE36C /* Login.storyboard */,
 			);
@@ -398,7 +398,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18ABC5CC2D2E332200FAE36C /* GoogleService-Info.plist in Resources */,
-				189392892D217A3D0067E194 /* Profile.storyboard in Resources */,
 				18A20DD12D2CE621000DC328 /* ActivityView.xib in Resources */,
 				189392A52D2327A40067E194 /* FeedTableViewCell.xib in Resources */,
 				189392872D217A2D0067E194 /* NewPost.storyboard in Resources */,
@@ -411,6 +410,7 @@
 				18ABC5F02D2F988500FAE36C /* CommentTableViewCell.xib in Resources */,
 				189392852D217A160067E194 /* Search.storyboard in Resources */,
 				18ABC5E62D2F982E00FAE36C /* Activity.storyboard in Resources */,
+				18BA445A2D36388E00325370 /* Profile.storyboard in Resources */,
 				18ABC5E42D2F97EA00FAE36C /* Post.storyboard in Resources */,
 				E147A08C2159176300AD9178 /* Assets.xcassets in Resources */,
 				18ABC5EC2D2F987200FAE36C /* PostTableViewCell.xib in Resources */,

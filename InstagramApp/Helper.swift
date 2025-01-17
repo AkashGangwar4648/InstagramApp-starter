@@ -79,7 +79,7 @@ class Helper {
         
         tabController.tabBar.isTranslucent = true
         
-        tabController.delegate = TabBarDelegate()
+        tabController.delegate = tabBarDelegate
         
         if let items = tabController.tabBar.items {
             

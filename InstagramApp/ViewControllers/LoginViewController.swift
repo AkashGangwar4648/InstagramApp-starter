@@ -10,7 +10,7 @@ import UIKit
 
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         
         loginButton.layer.borderWidth = CGFloat(0.5)
@@ -183,7 +183,7 @@ class LoginViewController: UIViewController {
                 
                 var errorMessage: String = "There was a problem logging in"
                 
-                if let errCode = AuthErrorCode(AuthErrorCode.Code(rawValue: error._code) ?? 0) {
+                if let errCode = AuthErrorCode(AuthErrorCode.Code(rawValue: error._code) ) {
                     
                     switch errCode {
                         
@@ -192,7 +192,7 @@ class LoginViewController: UIViewController {
                         errorTitle = "Wrong Password"
                         
                         errorMessage = "The password you entered is wrong"
-                    
+                        
                     case .invalidEmail:
                         
                         errorTitle = "Email Invalid"
@@ -216,26 +216,27 @@ class LoginViewController: UIViewController {
         
     }
     
-    @IBAction func dontHaveAccountButtonDidTouch(_ sender: Any) {
+    /*@IBAction func dontHaveAccountButtonDidTouch(_ sender: Any) {
+     
+     performSegue(withIdentifier: "SignupSegue", sender: nil)
+     
+     }
+     
+     }*/
+    
+    extension LoginViewController: UITextFieldDelegate {
         
-        performSegue(withIdentifier: "SignupSegue", sender: nil)
+        func textFieldDidEndEditing(_ textField: UITextField) {
+            
+            activeField = nil
+            
+        }
+        
+        func textFieldDidBeginEditing(_ textField: UITextField) {
+            
+            activeField = textField
+            
+        }
         
     }
-
-}
-
-extension LoginViewController: UITextFieldDelegate {
-    
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        
-        activeField = nil
-        
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        
-        activeField = textField
-        
-    }
-    
 }

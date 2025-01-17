@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 enum ProfileType {
     
@@ -37,7 +39,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UITableVie
         
         tableView.separatorStyle = .none
         
+        //loadData()
+        
     }
+    
+    /*func loadData() {
+        
+        let userRef = Database.database().reference()
+    }*/
     
     func numberOfSections(in tableView: UITableView) -> Int {
         

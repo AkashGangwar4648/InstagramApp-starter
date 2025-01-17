@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class SignupViewController: UIViewController {
     
@@ -154,6 +156,127 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func signUpButtonDidTouch(_ sender: Any) {
+        
+        guard let email = emailTextField.text else { return }
+        
+        guard let password = passwordTextField.text else { return }
+        
+        guard let username = usernameTextField.text else{ return }
+        
+        let spinner = UIViewController.displayLoading(withView: self.view)
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            
+            guard let strongSelf = self else { return }
+            
+            if error == nil {
+                
+                guard let userId = user?.user.uid else { return }
+                
+                Auth.auth().signIn(withEmail: email, password: password, completion: { (user, error) in
+                    
+                    DispatchQueue.main.async {
+                        
+                        UIViewController.removeLoading(spinner: spinner)
+                    }
+                    
+                    if error == nil {
+                        
+                        let userRef = Database.database().reference().child("users").child(userId)
+                        
+                        userRef.updateChildValues(["username": username, "bio": "Welcome to my profile"])
+                        
+                        DispatchQueue.main.async {
+                            
+                            Helper.login()
+                            
+                        }
+                        
+                    }
+                    
+                    /*else if let error = error {
+                        
+                        print(error.localizedDescription)
+                        
+                        var errorTitle: String = "Login Error"
+                        
+                        var errorMessage: String = "There was a problem logging in"
+                        
+                        if let errCode = AuthErrorCode(AuthErrorCode.Code(rawValue: error._code) ?? 0) {
+                            
+                            switch errCode {
+                                
+                            case .wrongPassword:
+                                
+                                errorTitle = "Wrong Password"
+                                
+                                errorMessage = "The password you entered is wrong"
+                            
+                            case .invalidEmail:
+                                
+                                errorTitle = "Email Invalid"
+                                
+                                errorMessage = "Please enter a valid email"
+                                
+                            default:
+                                
+                                break
+                            }
+                            
+                            let alert = Helper.errorAlert(title: errorTitle, message: errorMessage)
+                            
+                            DispatchQueue.main.async {
+                                
+                                strongSelf.present(alert, animated: true, completion: nil)
+                            }
+                        }
+                    }*/
+                })
+            }
+            /*else if let error = error {
+                
+                print(error.localizedDescription)
+                
+                var errorTitle: String = "Signup Error"
+                
+                var errorMessage: String = "There was a problem Signingup in"
+                
+                if let errCode = AuthErrorCode(AuthErrorCode.Code(rawValue: error._code) ?? 0) {
+                    
+                    switch errCode {
+                        
+                    case .emailAlreadyInUse:
+                        
+                        errorTitle = "Email Already In User"
+                        
+                        errorMessage = "Please providea different email"
+                    
+                    case .invalidEmail:
+                        
+                        errorTitle = "Email Invalid"
+                        
+                        errorMessage = "Please enter a valid email"
+                        
+                    case .weakPassword:
+                        
+                        errorTitle = "Weak Password"
+                        
+                        errorMessage = "Please enter a stronger password"
+                        
+                    default:
+                        
+                        break
+                    }
+                    
+                    let alert = Helper.errorAlert(title: errorTitle, message: errorMessage)
+                    
+                    DispatchQueue.main.async {
+                        
+                        strongSelf.present(alert, animated: true, completion: nil)
+                    }
+                }
+            }*/
+        }
         
         
         
