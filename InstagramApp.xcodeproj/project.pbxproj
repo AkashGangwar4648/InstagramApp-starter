@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -41,8 +41,6 @@
 		18ABC5E42D2F97EA00FAE36C /* Post.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ABC5E32D2F97EA00FAE36C /* Post.storyboard */; };
 		18ABC5E62D2F982E00FAE36C /* Activity.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ABC5E52D2F982E00FAE36C /* Activity.storyboard */; };
 		18ABC5E82D2F983800FAE36C /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18ABC5E72D2F983800FAE36C /* Login.storyboard */; };
-		18ABC5EA2D2F986700FAE36C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABC5E92D2F986700FAE36C /* PostTableViewCell.swift */; };
-		18ABC5EC2D2F987200FAE36C /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ABC5EB2D2F987200FAE36C /* PostTableViewCell.xib */; };
 		18ABC5EE2D2F987D00FAE36C /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABC5ED2D2F987C00FAE36C /* CommentTableViewCell.swift */; };
 		18ABC5F02D2F988500FAE36C /* CommentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ABC5EF2D2F988400FAE36C /* CommentTableViewCell.xib */; };
 		18ABC5F22D2F988F00FAE36C /* ProfileHeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ABC5F12D2F988F00FAE36C /* ProfileHeaderTableViewCell.swift */; };
@@ -59,6 +57,8 @@
 		18BEB6BD2D27E8030089F47B /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6BB2D27E8030089F47B /* SearchVC.swift */; };
 		18BEB6BE2D27E8030089F47B /* SearchVC+CustomMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6BC2D27E8030089F47B /* SearchVC+CustomMethods.swift */; };
 		18BEB6C22D2820700089F47B /* NewPostVC+CustomMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18BEB6C12D2820700089F47B /* NewPostVC+CustomMethods.swift */; };
+		9D39EE782D3A762100400C22 /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D39EE762D3A762100400C22 /* PostTableViewCell.swift */; };
+		9D39EE792D3A762100400C22 /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D39EE772D3A762100400C22 /* PostTableViewCell.xib */; };
 		9DF298BA2D27DFA0008FA0E4 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF298B92D27DFA0008FA0E4 /* HomeVC.swift */; };
 		9DF298BC2D27E1E4008FA0E4 /* HomeVC+CustomMethods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF298BB2D27E1D7008FA0E4 /* HomeVC+CustomMethods.swift */; };
 		E147A0852159176200AD9178 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E147A0842159176200AD9178 /* AppDelegate.swift */; };
@@ -104,8 +104,6 @@
 		18ABC5E32D2F97EA00FAE36C /* Post.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Post.storyboard; sourceTree = "<group>"; };
 		18ABC5E52D2F982E00FAE36C /* Activity.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Activity.storyboard; sourceTree = "<group>"; };
 		18ABC5E72D2F983800FAE36C /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
-		18ABC5E92D2F986700FAE36C /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostTableViewCell.swift; path = "../../../Instagram Clone Starter/InstagramApp/Views/PostTableViewCell.swift"; sourceTree = "<group>"; };
-		18ABC5EB2D2F987200FAE36C /* PostTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PostTableViewCell.xib; path = "../../../Instagram Clone Starter/InstagramApp/Views/PostTableViewCell.xib"; sourceTree = "<group>"; };
 		18ABC5ED2D2F987C00FAE36C /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		18ABC5EF2D2F988400FAE36C /* CommentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentTableViewCell.xib; sourceTree = "<group>"; };
 		18ABC5F12D2F988F00FAE36C /* ProfileHeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileHeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -122,6 +120,8 @@
 		18BEB6BB2D27E8030089F47B /* SearchVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		18BEB6BC2D27E8030089F47B /* SearchVC+CustomMethods.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchVC+CustomMethods.swift"; sourceTree = "<group>"; };
 		18BEB6C12D2820700089F47B /* NewPostVC+CustomMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewPostVC+CustomMethods.swift"; sourceTree = "<group>"; };
+		9D39EE762D3A762100400C22 /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		9D39EE772D3A762100400C22 /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 		9DF298B92D27DFA0008FA0E4 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		9DF298BB2D27E1D7008FA0E4 /* HomeVC+CustomMethods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeVC+CustomMethods.swift"; sourceTree = "<group>"; };
 		E147A0812159176200AD9178 /* InstagramApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -188,6 +188,8 @@
 		189392992D2316070067E194 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9D39EE762D3A762100400C22 /* PostTableViewCell.swift */,
+				9D39EE772D3A762100400C22 /* PostTableViewCell.xib */,
 				1893929A2D2316500067E194 /* StoriesTableViewCell.swift */,
 				1893929B2D2316500067E194 /* StoriesTableViewCell.xib */,
 				1893929E2D2320760067E194 /* StoryCollectionViewCell.swift */,
@@ -201,8 +203,6 @@
 				18A20DCB2D2CDFAF000DC328 /* ActivityTableViewCell.xib */,
 				18A20DCE2D2CE5F9000DC328 /* ActivityView.swift */,
 				18A20DD02D2CE621000DC328 /* ActivityView.xib */,
-				18ABC5E92D2F986700FAE36C /* PostTableViewCell.swift */,
-				18ABC5EB2D2F987200FAE36C /* PostTableViewCell.xib */,
 				18ABC5ED2D2F987C00FAE36C /* CommentTableViewCell.swift */,
 				18ABC5EF2D2F988400FAE36C /* CommentTableViewCell.xib */,
 				18ABC5F12D2F988F00FAE36C /* ProfileHeaderTableViewCell.swift */,
@@ -409,11 +409,11 @@
 				18A20DCD2D2CDFAF000DC328 /* ActivityTableViewCell.xib in Resources */,
 				18ABC5F02D2F988500FAE36C /* CommentTableViewCell.xib in Resources */,
 				189392852D217A160067E194 /* Search.storyboard in Resources */,
+				9D39EE792D3A762100400C22 /* PostTableViewCell.xib in Resources */,
 				18ABC5E62D2F982E00FAE36C /* Activity.storyboard in Resources */,
 				18BA445A2D36388E00325370 /* Profile.storyboard in Resources */,
 				18ABC5E42D2F97EA00FAE36C /* Post.storyboard in Resources */,
 				E147A08C2159176300AD9178 /* Assets.xcassets in Resources */,
-				18ABC5EC2D2F987200FAE36C /* PostTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,9 +427,9 @@
 				18ABC5DC2D2E466800FAE36C /* LoginViewController.swift in Sources */,
 				18BEB6A32D2547940089F47B /* ExploreCollectionViewCell.swift in Sources */,
 				E1E440B42163F16E0034FD40 /* UserData.swift in Sources */,
+				9D39EE782D3A762100400C22 /* PostTableViewCell.swift in Sources */,
 				18BEB6C22D2820700089F47B /* NewPostVC+CustomMethods.swift in Sources */,
 				18BEB6AF2D2653F80089F47B /* TabBarDelegate.swift in Sources */,
-				18ABC5EA2D2F986700FAE36C /* PostTableViewCell.swift in Sources */,
 				18BEB6AB2D25DEAD0089F47B /* PhotoLibraryViewController.swift in Sources */,
 				E1D28C3721629B5700DB621F /* SimpleCamera.swift in Sources */,
 				18ABC5D82D2E45CA00FAE36C /* CreatePostViewController.swift in Sources */,
@@ -607,7 +607,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InstagramApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -626,7 +626,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = InstagramApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
