@@ -2,23 +2,54 @@
 //  PostTableViewCell.swift
 //  InstagramApp
 //
-//  Created by Apple on 03/01/25.
+//  Created by Apple on 07/01/25.
 //  Copyright © 2025 Gwinyai Nyatsoka. All rights reserved.
 //
-
 import UIKit
 
 class PostTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var profileImage: UIImageView!
+    
+    @IBOutlet weak var userNameTitleButton: UIButton!
+    
+    @IBOutlet weak var postImage: UIImageView!
+    
+    @IBOutlet weak var likesCountLabel: UILabel!
+    
+    @IBOutlet weak var postCommentLabel: UILabel!
+    
+    @IBOutlet weak var dateLabel: UILabel!
+    
+    var post: Post?
+    
+    weak var profileDelegate: ProfileDelegate?
+    
+    weak var feedDelegate: FeedDataDelegate?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
+        profileImage.layer.cornerRadius = profileImage.frame.width / 2
+        
+        profileImage.layer.masksToBounds = true
+        
+        selectionStyle = UITableViewCell.SelectionStyle.none
+        
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBAction func userNameButtonDidTouch(_ sender: Any) {
+        
+        profileDelegate?.userNameDidTouch()
+        
     }
+    
+    @IBAction func likeButtonDidTouch(_ sender: Any) {
+        
+        
+        
+    }
+    
     
 }

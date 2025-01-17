@@ -10,7 +10,7 @@ import UIKit
 
 import FirebaseAuth
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -183,7 +183,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 var errorMessage: String = "There was a problem logging in"
                 
-                if let errCode = AuthErrorCode(AuthErrorCode.Code(rawValue: error._code) ) {
+                let nsError = error as NSError
+                
+                if let errCode = AuthErrorCode.Code(rawValue: nsError.code) {
                     
                     switch errCode {
                         
@@ -215,28 +217,29 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+}
+
+/*@IBAction func dontHaveAccountButtonDidTouch(_ sender: Any) {
+ 
+ performSegue(withIdentifier: "SignupSegue", sender: nil)
+ 
+ }
+ 
+ }*/
+
+extension LoginViewController:UITextFieldDelegate {
     
-    /*@IBAction func dontHaveAccountButtonDidTouch(_ sender: Any) {
-     
-     performSegue(withIdentifier: "SignupSegue", sender: nil)
-     
-     }
-     
-     }*/
-    
-    extension LoginViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         
-        func textFieldDidEndEditing(_ textField: UITextField) {
-            
-            activeField = nil
-            
-        }
-        
-        func textFieldDidBeginEditing(_ textField: UITextField) {
-            
-            activeField = textField
-            
-        }
+        activeField = nil
         
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        activeField = textField
+        
+    }
+    
 }
+

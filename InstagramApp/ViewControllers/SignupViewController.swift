@@ -165,7 +165,7 @@ class SignupViewController: UIViewController {
         
         let spinner = UIViewController.displayLoading(withView: self.view)
         
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+        Auth.auth().createUser(withEmail: email, password: password) { [weak self] (user, error) in
             
             guard let strongSelf = self else { return }
             
